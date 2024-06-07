@@ -19,6 +19,17 @@ class ListRetriever(BaseRetriever):
     def retrieve(self, query_embedding, top_k=3):
         distances, indices = self.index.search(np.array([query_embedding]), top_k)
         return [(i, self.embeddings[i], 1.0 / (1.0 + distances[0][j])) for j, i in enumerate(indices[0])]
+    
+
+def load_embeddings():
+    embeddings_images = np.loadtxt('Data/embeddings/images_questions.txt') 
+    embeddings_pdf = np.loadtxt('Data/embeddings/pdf_questions.txt')  
+    embeddings_excel = np.loadtxt('Data/embeddings/excel_questions.txt')
+    embeddings_excelans= np.loadtxt('Data/embeddings/excel_answers.txt')
+
+    # Concatenate all embeddings
+    all_embeddings = np.concatenate([embeddings_images, embeddings_pdf, embeddings_excel, embeddings_excelans], axis=0)
+    return all_embeddings
 
 
 def setup_rag(embeddings):
@@ -36,7 +47,6 @@ def setup_rag(embeddings):
 
     co = cohere.Client('yU3vQ4wcV8gbMCvsHngfAa6OfVmnaMQy1YOpVwqF')
     
-    # Configuration for the language model
     lm_config = CohereModelConfig(model="large", cohere_client=co)
 
     # Set up the prompt configuration
