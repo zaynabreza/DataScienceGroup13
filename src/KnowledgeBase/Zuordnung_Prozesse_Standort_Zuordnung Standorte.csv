@@ -1,0 +1,20 @@
+Geschäftsprozess,Standort
+,Bonn Bad-Godesberg
+GP001 Produktion,
+GP002 Angebotswesen,X
+GP003 Auftragsabwicklung,X
+GP004 Einkauf,X
+GP005 Disposition,
+GP006 Personalverwaltung,X
+GP006a Gehaltszahlung,X
+GP006b Neueinstellung,X
+GP006c Entlassung Mitarbeiter,X
+GP007 IT-Betrieb,X
+GP007a Betrieb Server,X
+GP007b Betrieb Clients,X
+GP007c Betrieb Netze,X
+GP007d Betrieb Produktions-IT,X
+GP008 Betrieb der Webseite,X
+GP009 Betrieb des Intranets,X
+GP010 Verwaltung des Mobile Device Managements,X
+GP011 Nutzung einer Cloud-Umgebung,X

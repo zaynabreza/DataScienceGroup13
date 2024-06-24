@@ -1,0 +1,1484 @@
+BSI IT-Grundschutz A.3 Modellierung
+Übersicht: Verwendete Bausteine
+Baustein
+ISMS.1
+ORP.1
+ORP.2
+ORP.3
+ORP.4
+ORP.5
+CON.1
+CON.2
+CON.3
+CON.4
+CON.5
+CON.6
+CON.7
+OPS.1.1.2
+OPS.1.1.3
+OPS.1.1.4
+OPS.1.1.5
+OPS.1.1.6
+OPS.1.2.2
+OPS.2.1
+OPS.2.2
+OPS.2.4
+DER.1
+DER.2.1
+DER.2.2
+DER.2.3
+DER.3.1
+DER.4
+APP.1.1
+APP.1.2
+APP.1.4
+APP.2.1
+APP.2.2
+APP.3.1
+APP.3.2
+APP.3.3
+APP.3.4
+APP.4.3
+APP.5.1
+SYS.1.1
+SYS.1.2.2
+SYS.1.3
+SYS.1.5
+SYS.1.8
+SYS.2.1
+SYS.2.2.3
+SYS.3.1
+SYS.3.2.1
+SYS.3.2.2
+SYS.3.2.3
+SYS.3.3
+SYS.4.1
+SYS.4.4
+IND.1
+IND.2.1
+IND.2.2
+IND.2.3
+IND.2.4
+NET.1.1
+NET.2.1
+NET.2.2
+NET.3.1
+NET.3.2
+NET.3.3
+NET.3.4
+NET.4.1
+NET.4.2
+NET.4.3
+INF.1
+INF.10
+INF.2
+INF.3
+INF.4
+INF.6
+INF.7
+INF.8
+INF.9
+Informationsverbund
+ISMS.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ORP.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ORP.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ORP.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ORP.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ORP.5
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.5
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.6
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+CON.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.1.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.1.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.1.5
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.1.6
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.2.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+DER.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+APP.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+Geschäftsprozesse
+GP001
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP002
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP003
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP004
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP005
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP006
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP006a
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP006b
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP006c
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP007
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP007a
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP007b
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP007c
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP007d
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP008
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP009
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP010
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GP011
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+Anwendungen
+A001
+APP.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A002
+APP.5.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A003
+APP.1.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A004
+APP.3.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A005
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A006
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A007
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A008
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A009
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A010
+APP.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A011
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A012
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A013
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A014
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A015
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A016
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A017
+APP.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A018
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A019
+OPS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+APP.3.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A020
+APP.4.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A021
+APP.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A022
+APP.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A023
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A024
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A025
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A026
+OPS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+OPS.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+APP.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A027
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A028
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A029
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A030
+OPS.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+APP.1.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A031
+OPS.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+APP.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+A032
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IT-Systeme
+C001
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C002
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C003
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C004
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C005
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C006
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C007
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C008
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+C009
+SYS.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.2.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+D001
+SYS.4.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L001
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L002
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L003
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L004
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L005
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L006
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L007
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L008
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+L009
+SYS.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+M001
+SYS.3.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.3.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.3.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.3.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+M002
+SYS.3.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.3.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.3.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N001
+NET.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N002
+NET.3.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N003
+NET.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N004
+NET.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N005
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N006
+NET.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N007
+NET.3.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+N008
+NET.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+NET.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S001
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S002
+APP.3.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S003
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S004
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S005
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S006
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S007
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.5
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S008
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S009
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S010
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.5
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S011
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S012
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S013
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S014
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S015
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+S016
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.8
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+T001
+NET.4.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+NET.4.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+T002
+NET.4.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+ICS-Systeme
+I001
+IND.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.2.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.2.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.2.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+I002
+IND.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.2.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+I003
+SYS.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+SYS.1.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+IND.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+Anderes / IoT-System
+O001
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+O002
+SYS.4.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+O003
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+O004
+SYS.4.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+O005
+SYS.4.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+Kommunikationsverbindungen
+K001
+NET.1.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K002
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K003
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K004
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K005
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K006
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K007
+NET.3.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+K008
+NET.3.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+Räume
+R001
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R002
+INF.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R003
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R004
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R005
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R006
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R007
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R008
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R017
+INF.10
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R009
+INF.2
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R010
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R011
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R012
+INF.7
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R013
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R016
+INF.10
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GB001
+INF.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+GB002
+INF.1
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.3
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R014
+INF.8
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R015
+INF.9
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R018
+INF.4
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:
+R019
+INF.6
+Beschreibung:
+Bearbeitungsreihenfolge:
+Letzte Änderung:
+Hauptverantwortlicher:
+Verantwortlicher:

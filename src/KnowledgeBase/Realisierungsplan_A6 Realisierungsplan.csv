@@ -1,0 +1,198 @@
+Zielobjekt,Baustein,Anforderung,Maßnahme
+A002  E-Mail-Client,APP.5.1 Allgemeine Groupware,APP.5.1.A14,Die Mitarbeiter werden intensiver im Umgang mit dem E-Mail-Client und den besonderen Dateiformaten geschult.
+A005 Entwicklungssystem,Kein Baustein ,,Es wird eine Cyber-Versicherung abgeschlossen.
+A005 Entwicklungssystem,Kein Baustein ,,"Es wird organisatorisch geregelt, dass Daten nur noch über verschlüsselte Medien übertragen werden dürfen."
+A017 Content Management System,APP.3.1 Webanwendungen,APP.3.1.A20,Anschaffung einer Web Application Firewall.
+A019 Webserver,APP.3.2 Webserver,APP.3.2.A15,Anschaffung eines redundanten Webservers für das Intranet.
+A020 Datenbanksystem,APP.4.3 Relatione Datenbanksysteme,APP.4.3.A21,Anschaffung eines Sicherheitstools für Datenbanken.
+A021 Internes Ticketsystem,APP.3.1 Webanwendungen,APP.3.1.A20,Anschaffung einer Web Application Firewall.
+A022 Internes Wiki,APP.3.1 Webanwendungen,APP.3.1.A20,Anschaffung einer Web Application Firewall.
+A026 Mobile Device Management,APP.3.1 Webanwendungen,APP.3.1.A20,Anschaffung einer Web Application Firewall.
+A031 Cloud-Umgebung,APP.3.1 Webanwendungen,APP.3.1.A20,Anschaffung einer Web Application Firewall.
+C001 - C009 Clients,SYS.2.1 Allgemeiner Client,SYS.2.1.A12,Der Beschaffungsprozess wird von der Einkaufsabteilung überarbeitet und vervollständigt.
+C001 - C009 Clients,SYS.2.1 Allgemeiner Client,SYS.2.1.A17,Es wird ein Freigabeprozess definiert und eingesetzt.
+C001 - C009 Clients,SYS.2.1 Allgemeiner Client,SYS.2.1.A21,Aufgrund der Vielzahl an Videokonferenzen der Mitarbeiter des Vertriebs wird die Funktion für alle Mitarbeiter des Vertriebs aktiviert.
+C001 - C009 Clients,SYS.2.1 Allgemeiner Client,SYS.2.1.A37,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+C001 - C009 Clients,SYS.2.2.3 Clients unter Windows 10,SYS.2.2.3.A4,Nach erfolgreicher Prüfung wird über das Deaktivieren der Einstellungen entschieden.
+D001 Multifunktionsdrucker,"SYS.4.1 Drucker, Kopierer und Multifunktionsgeräte",SYS.4.1.A1,Das Konzept für die Multifunktionsdrucker wird ergänzt und vervollständigt.
+D001 Multifunktionsdrucker,"SYS.4.1 Drucker, Kopierer und Multifunktionsgeräte",SYS.4.1.A21,"Es soll ein Prozess definiert werden, welcher eine regelmäßige Überprüfung vorsieht."
+"GB001 Verwaltungsgebäude Bad Godesberg, GB002 Produktionsgebäude Beuel",INF.4 IT-Verkabelung,INF.4.A5,Es wird bezüglich der Nutzung des Protokolls sensibilisiert.
+"GB001 Verwaltungsgebäude Bad Godesberg, GB002 Produktionsgebäude Beuel",INF.4 IT-Verkabelung,INF.4.A7,Die IT-Verkabelungen werden auf nicht mehr benötigte Kabel überprüft.
+GB002 Produktionsgebäude Beuel,INF.1 Allgemeines Gebäude,INF.1.A32,Das Kataster wird entsprechend der Planung erstellt.
+GB002 Produktionsgebäude Beuel,INF.3 Elektrotechnische Verkabelung,INF.3.A17,Das Kataster wird entsprechend der Planung erstellt.
+I001 Speicherprogrammierbare Produktionsmaschinen,IND.1 Betriebs- und Steuerungstechnik,IND.1.A14,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+I001 Speicherprogrammierbare Produktionsmaschinen,IND.1 Betriebs- und Steuerungstechnik,IND.1.A16,Es wird eine P-A-P-Netzstruktur aufgebaut.
+I001 Speicherprogrammierbare Produktionsmaschinen,IND.2.1 Allgemeine ICS-Komponente,IND.2.1.A18,"Es wird geprüft, ob eine zusätzliche Kommunikationsmöglichkeit im Notfall möglich ist."
+I002 SCADA,IND.1 Betriebs- und Steuerungstechnik,IND.1.A14,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+I002 SCADA,IND.1 Betriebs- und Steuerungstechnik,IND.1.A16,Es wird eine P-A-P-Netzstruktur aufgebaut.
+I002 SCADA,IND.2.1 Allgemeine ICS-Komponente,IND.2.1.A18,"Es wird geprüft, ob eine zusätzliche Kommunikationsmöglichkeit im Notfall möglich ist."
+I003 Server für die Betriebsdatenerfassung,IND.1 Betriebs- und Steuerungstechnik,IND.1.A14,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+I003 Server für die Betriebsdatenerfassung,IND.1 Betriebs- und Steuerungstechnik,IND.1.A16,Es wird eine P-A-P-Netzstruktur aufgebaut.
+I003 Server für die Betriebsdatenerfassung,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+I003 Server für die Betriebsdatenerfassung,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+I003 Server für die Betriebsdatenerfassung,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,"Es wird geprüft, ob die Kosten für einen redundanten Server den Wert der Maßnahme überschreiten."
+I003 Server für die Betriebsdatenerfassung,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+Informationsverbund,CON.3 Datensicherungskonzept,CON.3.A10,"Es wird erneut geprüft, ob die Verpflichtung der IT Mitarbeiter ausreichend ist."
+Informationsverbund,DER.1 Detektion von sicherheitsrelevanten Ereignissen,DER.1.A8,Der Netzplan soll angepasst werden.
+Informationsverbund,DER.1 Detektion von sicherheitsrelevanten Ereignissen,DER.1.A11,Es wird ein zentraler Protokollierungsserver angeschafft.
+Informationsverbund,ISMS.1 Sicherheitsmanagement,ISMS.1.A6,Die Stellen als Vertretung für die IS-Organisations-Rollen sollen Intern ausgeschrieben werden.
+Informationsverbund,ISMS.1 Sicherheitsmanagement,ISMS.1.A10,Das Sicherheitskonzept wird nach Abschluss der Einführung des IT-Grundschutzes fertiggestellt.
+Informationsverbund,OPS.1.1.5 Protokollierung,OPS.1.1.5.A6,Es wird ein zentraler Protokollierungsserver angeschafft.
+Informationsverbund,OPS.1.1.5 Protokollierung,OPS.1.1.5.A9,"Es soll eine virtuelle Maschine aufgesetzt werden, welche als LOG-Server dient."
+Informationsverbund,OPS.1.2.2 Archivierung,OPS.1.2.2.A14,"Es wird ein Verantwortlicher ernannt, welcher regelmäßig pro aktiv nach Informationen im Internet recherchiert."
+Informationsverbund,OPS.2.4 Fernwartung,OPS.2.4.A14,Der Wert der Maßnahme wird mit den Kosten verglichen. Anschließend wird eine Entscheidung über die Umsetzung getroffen.
+Informationsverbund,ORP.2 Personal,ORP.2.A6,Die Arbeitsverträge werden um Konkurrenzverbote und Karenzzeiten ergänzt.
+Informationsverbund,ORP.4 Identitäts- und Berechtigungsmanagement,ORP.4.A14,"Der IT-Betrieb wird damit beauftragt, einen Prozess zur Kontrolle der Wirksamkeit zu entwickeln."
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A18,Es wird eine P-A-P-Netzstruktur aufgebaut.
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A19,Die IT-Infrastrukturdienste sollen separiert werden.
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A28,Es wird eine Redundanz hergestellt. Dazu wird ein redundanter Router angeschafft.
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A29,Es wird eine Redundanz hergestellt. Dazu soll ein zweiter Internet-Provider beauftragt werden. 
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A31,"Es wird geprüft, ob die physische Trennung von Sicherheitssegmenten erforderlich ist."
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A32,Es soll ein Netzmanagement eingerichtet werden.
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A35,"Es wird geprüft, ob netzbasiertes DLP notwendig ist."
+K001 Internetanschluss BG,NET.1.1 Netzarchitektur und -design,NET.1.1.A36,"Es wird geprüft, ob auf VLAN's verzichtet und eine physische Trennung erichtet werden kann."
+"M001, M002 iPhone, iPad",SYS.3.2.1 Allgemeine Smartphones und Tablets,SYS.3.2.1.A1,Es wird eine vollständige Strategie zur Nutzung von Smartphones und Tablets erstellt.
+"M001, M002 iPhone, iPad",SYS.3.2.1 Allgemeine Smartphones und Tablets,SYS.3.2.1.A2,Es wird eine vollständige Strategie zur Nutzung von Clouds auf den Smartphones und Tablets erstellt.
+"M001, M002 iPhone, iPad",SYS.3.2.1 Allgemeine Smartphones und Tablets,SYS.3.2.1.A12,Die Gerätenamen werden geändert. Die Namen sollen keinen Hinweis mehr auf die RECPLAST enthalten.
+"M001, M002 iPhone, iPad",SYS.3.2.1 Allgemeine Smartphones und Tablets,SYS.3.2.1.A13,Screensharing und Casting werden auf den iPhones und iPads deaktiviert.
+"M001, M002 iPhone, iPad",SYS.3.2.2 Mobile Device Management,SYS.3.2.2.A8,Die Sicherheitsrichtlinie für mobile Endgeräte wird um ein Kapitel bezüglich der erlaubten Informationen ergänzt.
+"M001, M002 iPhone, iPad",SYS.3.2.3 iOS (for Enterprise),SYS.3.2.3.A11,Die Gerätenamen werden geändert. Die Namen sollen keinen Hinweis mehr auf die RECPLAST enthalten.
+"M001, M002 iPhone, iPad",SYS.3.2.3 iOS (for Enterprise),SYS.3.2.3.A12,Es dürfen in Zukunft nur noch institutionsbezogene Apple ID's verwendet werden. Der Wechsel wird nach und nach vorgenommen.
+"M001, M002 iPhone, iPad",SYS.3.2.3 iOS (for Enterprise),SYS.3.2.3.A13,"Es wird ein Konfigurationsprofil erstellt, welches über das MDM an jedes Endgerät verteilt wird."
+"M001, M002 iPhone, iPad",SYS.3.2.3 iOS (for Enterprise),SYS.3.2.3.A15,Die Continuity-Funktion wird erlaubt.
+"M001, M002 iPhone, iPad",SYS.3.2.3 iOS (for Enterprise),SYS.3.2.3.A18,Aufgrund des MDM's sind die Mitarbeiter verpflichtet den Browser der MDM-Lösung zu nutzen.
+M001 iPhone,SYS.3.3 Mobiltelefon,SYS.3.3.A7,Der Beschaffungsprozess wird von der Einkaufsabteilung überarbeitet und vervollständigt.
+N001 Router zum Internet,NET.3.1 Router und Switches,NET.3.1.A24,"Es soll ein netzbasierter Zugriff per 802.1x eingesetzt werden. Dabei muss geprüft werden, ob dies andere Maßnahmen ersetzen kann."
+N001 Router zum Internet,NET.3.1 Router und Switches,NET.3.1.A26,Es wird ein redundanter Router beschafft.
+N002 Firewall,NET.3.2 Firewall,NET.3.2.A16,Es wird eine P-A-P-Netzstruktur aufgebaut.
+N002 Firewall,NET.3.2 Firewall,NET.3.2.A26,Beim Erreichen des End of Life-Cycles wird eine neue dedizierte Firewall angeschafft.
+N002 Firewall,NET.3.2 Firewall,NET.3.2.A29,Es soll eine weitere Firewall beschafft werden.
+N003 Zentrale Switche in Bad Godesberg und Beuel,NET.3.1 Router und Switches,NET.3.1.A24,"Es soll ein netzbasierter Zugriff per 802.1x eingesetzt werden. Dabei muss geprüft werden, ob dies andere Maßnahmen ersetzen kann."
+N004 Router zur Verbindung der Standorte BG und BE,NET.3.1 Router und Switches,NET.3.1.A24,"Es soll ein netzbasierter Zugriff per 802.1x eingesetzt werden. Dabei muss geprüft werden, ob dies andere Maßnahmen ersetzen kann."
+N004 Router zur Verbindung der Standorte BG und BE,NET.3.1 Router und Switches,NET.3.1.A26,Es wird ein redundanter Router beschafft.
+N005 ReCoBS,NET 3.4 ReCoBS,NET.3.4.A3,Es soll ein zertifizierter ReCoBS-Server angeschafft werden.
+N005 ReCoBS,NET 3.4 ReCoBS,NET.3.4.A11,Es wird ein zentraler Protokollierungs- und Monitoringserver angeschafft.
+N005 ReCoBS,NET 3.4 ReCoBS,NET.3.4.A13,Die für ReCoBS benötigte Hardware soll für den Cluster-Betrieb redundant ausgelegt werden.
+N006 Switche in den Vertriebsbüros,NET.3.1 Router und Switches,NET.3.1.A24,"Es soll ein netzbasierter Zugriff per 802.1x eingesetzt werden. Dabei muss geprüft werden, ob dies andere Maßnahmen ersetzen kann."
+N006 Switche in den Vertriebsbüros,NET.3.1 Router und Switches,NET.3.1.A26,Es werden redundante Switche beschafft.
+N007 Router zum Internet der Vertriebsbüros,NET.3.1 Router und Switches,NET.3.1.A24,"Es soll ein netzbasierter Zugriff per 802.1x eingesetzt werden. Dabei muss geprüft werden, ob dies andere Maßnahmen ersetzen kann."
+N007 Router zum Internet der Vertriebsbüros,NET.3.1 Router und Switches,NET.3.1.A26,Es wird ein redundanter Router beschafft.
+N008 WLAN-Access-Points,NET.2.1 WLAN-Betrieb,NET.2.1.A15,Die bereits vorhandene VPN-Infrastruktur soll auch für die WLANs genutzt werden.
+N008 WLAN-Access-Points,NET.2.1 WLAN-Betrieb,NET.2.1.A16,Es wird ein Intrusion Detection System beschafft.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A6,Die IoT-Geräte werden in die Sicherheitsrichtlinie der Institution mit aufgenommen.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A7,Es wird ein Konzept für IoT-Geräte entwickelt.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A8,Es werden Beschaffungskriterien für IoT-Geräte entwickelt.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A9,Es werden im Rahmen der Entwicklung eines Konzeptes die Regelungen des Einsatzes mit berücksichtigt.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A10,"Es wird geprüft, ob die Installation durch RECPLAST Mitarbeiter sinnvoller ist und ob so Kosten gespart werden können."
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A14,Es wird ein Freigabeprozess definiert und eingesetzt.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A17,Der Netzverkehr soll beim Aufbau eines zentralen Protokollierungsservers und Log-Servers mit berücksichtigt werden.
+"O002, O004, O005 Kühlschrank, Kaffeevollautomat, Sprachassistent",SYS.4.4 Allgemeines IoT-Gerät,SYS.4.4.A18,Die IoT-Geräte sollen in das Protokollierungskonzept integriert werden.
+"R001, R010, R018 Technikraum",INF.4 IT-Verkabelung,INF.4.A5,Es wird bezüglich der Nutzung des Protokolls sensibilisiert.
+"R001, R010, R018 Technikraum",INF.4 IT-Verkabelung,INF.4.A7,Die IT-Verkabelungen werden auf nicht mehr benötigte Kabel überprüft.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A1,Die Erhebung der Anforderungen wird durchgeführt.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A10,Die Haustechnik wird auf die Dokumentationspflicht von Wartungen hingewiesen und dazu aufgefordert diese zukünftig ordnungsgemäß zu dokumentieren.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A14,Es wird eine Netzersatzanlage für die Serverräume angeschafft.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A19,"Die geplanten Funktionstests werden nachgezogen und zukünftig wird besser darauf geachtet, dass diese durchgeführt werden."
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A20,"Die Haustechnik wird beauftragt, die Infrastruktur- und Baupläne zu aktualisieren."
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A21,"Die Wirksamkeit der Maßnahme soll aufgrund der Redundanz der wichtigsten Server den Kosten gegenübergestellt werden, um so eine Entscheidung treffen zu können."
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A25,Es wird eine redundante USV angeschafft.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A26,Es wird ein Angebot für eine redundante NEA eingeholt. Anschließend wird über die Umsetzung entschieden.
+"R002, R009 Serverraum",INF.2 Rechenzentrum sowie Serverraum,INF.2.A28,Es soll eine Prüfung der Kosten für eine EMA nach VDS-Klasse C durchgeführt werden.
+R002 Serverraum,INF.3 Elektrotechnische Verkabelung,INF.3.A7,Die Serverschränke sollen auf nicht mehr benötigte Kabel unterprüft werden.
+"R002, R009 Serverraum",INF.4 IT-Verkabelung,INF.4.A5,Es wird bezüglich der Nutzung des Protokolls sensibilisiert.
+"R002, R009 Serverraum",INF.4 IT-Verkabelung,INF.4.A7,Die IT-Verkabelungen werden auf nicht mehr benötigte Kabel überprüft.
+R009 Serverraum,INF.3 Elektrotechnische Verkabelung,INF.3.A7,Die Serverschränke sollen auf nicht mehr benötigte Kabel unterprüft werden.
+R018 Technikraum Vertriebsbüros,INF.4 IT-Verkabelung,INF.4.A9,Die Kennzeichnung der Verkabelung in den Vertriebsbüros wird auf den neusten Stand gebracht.
+R019 Datenträgerarchiv,INF.6 Datenträgerarchiv,INF.6.A7,"Es wird ein Angebot für eine Klimaanlage eingeholt.Im Raum wird lediglich ein Tresor mit Tapes aufbewahrt. Diese sind durch den Tresor geschützt, weshalb eine Klimaanlage als nicht zwingend notwendig angesehen wird."
+S001 Domänen-Controller,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S001 Domänen-Controller,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S001 Domänen-Controller,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S001 Domänen-Controller,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S001 Domänen-Controller,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S002 Dateiserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S002 Dateiserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S002 Dateiserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S002 Dateiserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S002 Dateiserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S003 Druckserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S003 Druckserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S003 Druckserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S003 Druckserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S003 Druckserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S004 Kommunikationsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S004 Kommunikationsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S004 Kommunikationsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Es wird ein virtueller redundanter Server erstellt.
+S004 Kommunikationsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S004 Kommunikationsserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S004 Kommunikationsserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,Es wird ein redundanter Server angeschafft.
+S004 Kommunikationsserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S005 DB-Server der Kunden- und Auftragsbearbeitung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S006 DB-Server der Finanzbuchhaltung,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S006 DB-Server der Finanzbuchhaltung,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S006 DB-Server der Finanzbuchhaltung,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S006 DB-Server der Finanzbuchhaltung,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S006 DB-Server der Finanzbuchhaltung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S006 DB-Server der Finanzbuchhaltung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S006 DB-Server der Finanzbuchhaltung,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S007 Virtualisierungsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S007 Virtualisierungsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S007 Virtualisierungsserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S007 Virtualisierungsserver,SYS.1.5 Virtualisierung,SYS.1.5.A22,Die Kosten für den Einsatz von Mandatory Access Controls werden geprüft.
+S007 Virtualisierungsserver,SYS.1.5 Virtualisierung,SYS.1.5.A26,Die Kosten für eine PKI wird geprüft.
+S007 Virtualisierungsserver,SYS.1.5 Virtualisierung,SYS.1.5.A28,Es werden nach und nach alle virtuellen Systeme verschlüsselt.
+S008 Server für Produktionssteuerung,IND.1 Betriebs- und Steuerungstechnik,IND.1.A14,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S008 Server für Produktionssteuerung,IND.1 Betriebs- und Steuerungstechnik,IND.1.A16,Es wird eine P-A-P-Netzstruktur aufgebaut.
+S008 Server für Produktionssteuerung,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S008 Server für Produktionssteuerung,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S008 Server für Produktionssteuerung,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Es wird ein redundanter Server angeschafft.
+S008 Server für Produktionssteuerung,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S009 Wiki-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S009 Wiki-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S009 Wiki-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Da der Server virtuell ist wird auf ein redundanten Server verzichtet. Es sollen jedoch regelmäßige Images der virtuellen Server erstellt werden und eine Dokumentation zum Transferieren der virtuellen Maschine erstellt werden.
+S009 Wiki-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S010 Virtualisierungsserver2,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S010 Virtualisierungsserver2,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S010 Virtualisierungsserver2,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Es soll ein redundanter virtueller Server beschafft werden.
+S010 Virtualisierungsserver2,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S010 Virtualisierungsserver2,SYS.1.5 Virtualisierung,SYS.1.5.A22,Die Kosten für den Einsatz von Mandatory Access Controls wird geprüft.
+S010 Virtualisierungsserver2,SYS.1.5 Virtualisierung,SYS.1.5.A26,Die Kosten für eine PKI wird geprüft.
+S010 Virtualisierungsserver2,SYS.1.5 Virtualisierung,SYS.1.5.A28,Es werden nach und nach alle virtuellen Systeme verschlüsselt.
+S011 Ticketsystem,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S011 Ticketsystem,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S011 Ticketsystem,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Da der Server virtuell ist wird auf ein redundanten Server verzichtet. Es sollen jedoch regelmäßige Images der virtuellen Server erstellt werden und eine Dokumentation zum Transferieren der virtuellen Maschine erstellt werden.
+S011 Ticketsystem,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S012 Backupserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S012 Backupserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S012 Backupserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Es soll ein redundanter Server beschafft werden.
+S012 Backupserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S012 Backupserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S012 Backupserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,Es soll ein redundanter Server beschafft werden.
+S012 Backupserver,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S013 Windows-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S013 Windows-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S013 Windows-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Da der Server virtuell ist wird auf ein redundanten Server verzichtet. Es sollen jedoch regelmäßige Images der virtuellen Server erstellt werden und eine Dokumentation zum Transferieren der virtuellen Maschine erstellt werden.
+S013 Windows-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S013 Windows-Update-Server,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S013 Windows-Update-Server,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,Da der Server virtuell ist wird auf ein redundanten Server verzichtet. Es sollen jedoch regelmäßige Images der virtuellen Server erstellt werden und eine Dokumentation zum Transferieren der virtuellen Maschine erstellt werden.
+S013 Windows-Update-Server,SYS.1.2.2 Allgemeiner Server,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S014 Linux-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S014 Linux-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S014 Linux-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,Da der Server virtuell ist wird auf ein redundanten Server verzichtet. Es sollen jedoch regelmäßige Images der virtuellen Server erstellt werden und eine Dokumentation zum Transferieren der virtuellen Maschine erstellt werden.
+S014 Linux-Update-Server,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S015 DB-Server fürs Systemmanagement,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S015 DB-Server fürs Systemmanagement,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S015 DB-Server fürs Systemmanagement,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S015 DB-Server fürs Systemmanagement,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.
+S015 DB-Server fürs Systemmanagement,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A11,Es wird ein Intrusion Detection System beschafft.
+S015 DB-Server fürs Systemmanagement,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A12,"Die Datensicherungen werden zentral abgespeichert, so dass jederzeit ein Wiedereinspielen der Datenbank möglich ist. Deshalb wird auf eine Redundanz verzichtet."
+S015 DB-Server fürs Systemmanagement,SYS.1.2.2 Windows Server 2012,SYS.1.2.2.A13,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S016 Cloudserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A26,Es wird eine Zwei-Faktor-Authentisierung angeschafft.
+S016 Cloudserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A27,Es wird ein Intrusion Detection System beschafft.
+S016 Cloudserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A28,"Es wird geprüft, ob die Kosten für einen redundanten Server den Wert der Maßnahme überschreiten."
+S016 Cloudserver,SYS.1.1 Allgemeiner Server,SYS.1.1.A32,Die Kennwörter für kritische User werden aufgesplittet.

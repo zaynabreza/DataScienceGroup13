@@ -1,0 +1,25 @@
+Baustein,Zielobjekte,Begründung
+Schicht OPS: Betrieb,,
+OPS.1.2.3 Informations- und Datenträgeraustausch,Nicht relevant,Ein Datenträgeraustausch findet nicht statt.
+OPS.1.2.4 Telearbeit,Nicht relevant,Telearbeit ist nicht möglich.
+OPS.3.1 Outsourcing für Dienstleister,Nicht relevant,Es werden keine Outsorcing-Dienstleistungen angeboten.
+Schicht DER: Detektion und Reaktion,,
+DER.3.2 Revisionen auf Basis des Leitfadens IS-Revision,Nicht relevant,Es werden keine Revisionen auf Basis des Leitfadens IS-Revision durchgeführt.
+Schicht APP: Anwendungen,,
+APP.2.3 OpenLDAP,Nicht relevant,OpenLDAP wird nicht eingesetzt.
+APP.3.6 DNS-Server,Nicht relevant,Es wird kein eigener DNS-Server betrieben.
+APP.4.2 SAP-ERP-System,Nicht relevant,Es wird kein SAP eingesetzt.
+APP.4.6 SAP ABAP-Programmierung,Nicht relevant,Es wird kein SAP eingesetzt.
+APP.5.2 Microsoft Exchange und Outlook,Nicht relevant,
+Schicht SYS: IT-Systeme,,
+SYS.1.7 IBM Z-System,Nicht relevant,Es wird kein IBM Z-System genutzt.
+SYS.2.2.2 Clients unter Windows 8.1,Nicht relevant,Windows 8.1 wird nicht genutzt.
+SYS.2.3 Clients unter Unix,Nicht relevant,Alle Clients sind mit Windows 10 ausgestattet.
+SYS.2.4 Clients unter macOS,Nicht relevant,Alle Clients sind mit Windows 10 ausgestattet.
+SYS.3.2.4 Anroid,Nicht relevant,Es wird kein Android genutzt.
+SYS.3.4 Mobile Datenträger,Nicht relevant,Es werden keine mobilen Datenträger genutzt.
+SYS.4.3 Eingebettete Systeme,Nicht relevant,Es werden keine eingebetteten Systeme genutzt.
+Schicht IND: Industrielle IT,,
+IND.2.7 Safety Instrumented Systems,Nicht relevant,Safety Indstrumented Systems werden nicht von der RECPLAST GmbH eingesetzt.
+Schicht NET: Netze und Kommunikation,,
+NET.1.2 Netzmanagement,Nicht relevant,Ein Netzmanagement ist noch nicht vollständig etabliert.
