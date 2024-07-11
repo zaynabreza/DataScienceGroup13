@@ -18,13 +18,23 @@ import re
 from PyPDF2 import PdfReader
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import inch
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib import colors
+import textwrap
+import copy
+from langdetect import detect
+from google.cloud import translate_v2 as translate
+
 
 
 def initializeIndex(embeddingModel="all-MiniLM-L6-v2.gguf2.f16.gguf"):
     load_dotenv()  # This loads the .env file at the application start
     password = os.getenv('passwd')
     api_key = os.getenv('api_key')
+   
 
     embedding = GPT4AllEmbeddings(model_name=embeddingModel) # add parameters here
 
@@ -110,6 +120,58 @@ def get_Questions(filePath, llm):
         return questions
 
 
+def generate_pdf(file_path, responses, questions):
+    # pdfmetrics.registerFont(TTFont('Helvetica', 'Helvetica.ttf'))  # Ensure the font is available
+    styles = getSampleStyleSheet()
+    styleN = styles['Normal']
+    styleN.fontName = 'Helvetica-Bold'
+    styleN.fontSize = 12
+    styleN.leading = 14
+
+    base_name = os.path.basename(file_path)
+    new_file_name = base_name.replace('.pdf', '_filled.pdf')
+    
+    c = canvas.Canvas(new_file_name, pagesize=letter)
+    width, height = letter
+    margin = inch * 0.75
+    max_width = width - 2 * margin
+    text_height = 12  # Approximate line height based on font size
+    
+    y_position = height - margin
+    c.setFont("Helvetica", 12)
+    
+    for question, answer in zip(questions, responses):
+        # Wrap and draw the question
+        c.setFont("Helvetica-Bold", 12)
+        wrapped_question = textwrap.fill(question, width=80)
+        question_lines = wrapped_question.split('\n')
+        for line in question_lines:
+            if y_position < margin + text_height:
+                c.showPage()
+                y_position = height - margin
+                c.setFont("Helvetica-Bold", 12) 
+            c.drawString(margin, y_position, line)
+            y_position -= text_height
+        
+        y_position -= text_height / 2  # Add a little space between question and answer
+        
+        # Wrap and draw the answer
+        c.setFont("Helvetica", 12) 
+        wrapped_answer = textwrap.fill(answer, width=80)
+        answer_lines = wrapped_answer.split('\n')
+        for line in answer_lines:
+            if y_position < margin + text_height:
+                c.showPage()
+                y_position = height - margin
+                c.setFont("Helvetica", 12)
+            c.drawString(margin, y_position, line)
+            y_position -= text_height
+        
+        y_position -= text_height  # Extra space before next Q&A
+    
+    c.save()
+    print(f"PDF generated: {new_file_name}")
+    return new_file_name
 
 def fill_Questionnaire(file_path):
 
@@ -142,45 +204,14 @@ def fill_Questionnaire(file_path):
         # response = ' '.join(list(dict.fromkeys(response.split())))
 
         responses.append(response)
+
+    responses = post_process_responses(responses, questions)
     
-    base_name = os.path.basename(file_path)  # Extract file name from path
-    new_file_name = base_name.replace('.pdf', '_filled.pdf')
-
-    c = canvas.Canvas(new_file_name, pagesize=letter)
-    width, height = letter
-
-    y_position = height - 40  # Start 40 pixels down from the top
-    c.setFont("Helvetica-Bold", 14)
-
-    for question, answer in zip(questions, responses):
-        if y_position < 40:  # Check if we are near the bottom of the page
-            c.showPage()
-            y_position = height - 40  # Reset y_position for the new page
-            c.setFont("Helvetica", 12)  # Reset font for the content
-        
-        # Print question
-        c.setFont("Helvetica-Bold", 12)
-        text = c.beginText(40, y_position)
-        text.textLine(f"Question: {question}")
-        c.drawText(text)
-
-        # Adjust y position for answer
-        y_position -= 20
-
-        # Print answer
-        c.setFont("Helvetica", 12)
-        text = c.beginText(40, y_position)
-        text.textLine(f"Answer: {answer}")
-        c.drawText(text)
-
-        # Adjust y position for next question
-        y_position -= 40
-    
-    c.save()  # Save the PDF
-    return new_file_name
-
+    return generate_pdf(file_path, responses, questions)
 
 def generate_answer(question):
+
+
     elastic_vector_search = initializeIndex()
     print("Index initialized")
 
@@ -198,11 +229,78 @@ def generate_answer(question):
 
     return response
 
+def post_process_responses(responses, questions):
+    print("Post processing responses")
+
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "././hybrid-unity-429117-d7-1182307a468e.json"
+
+    
+    translate_client = translate.Client()
+    
+    trigger_words = {'Question', 'Answer', 'Context', 'Translation', '\nQuestion', '\nAnswer', 'Note', '\nContext', '\nTranslation', "Note", '\nNote', '(Note'}
+
+    processed_responses = []
+    for response, question in zip(responses, questions):
+        # 1. Remove question repetition
+        new_r = copy.deepcopy(response)
+        if question in response:
+            start_index = new_r.index(question) + len(question)
+            new_r = new_r[start_index:].lstrip()  # Remove the question and leading whitespaces
+        
+        
+        # 2. Remove any leftover sentences ending with a question mark
+        new_r = re.sub(r'\s*\n.*\?\s*\n', '\n', new_r)
+
+        # 3. Handle trigger words
+        for trigger_word in trigger_words:
+            if trigger_word in new_r:
+                trigger_index = new_r.index(trigger_word)
+                new_r = new_r[:trigger_index]
+                break
+
+        # 4. See if any sentence still not in same lanaguage as question, if only sentence, translate it
+        try:
+            question_lang = detect(question)
+        except:
+            question_lang = 'de'
+        
+        sentences = re.split(r'(?<=[.!?])\s+', new_r)
+        filtered_sentences = []
+        all_foreign = True
+
+        for sentence in sentences:
+            try:
+                if detect(sentence) == question_lang:
+                    filtered_sentences.append(sentence)
+                    all_foreign = False
+            except:
+                continue 
+
+        if filtered_sentences:
+            new_r = ' '.join(filtered_sentences)
+        else:
+            #check if theres any alhpahbet  in the response at all
+            if any(c.isalpha() for c in new_r):
+                new_r = translate_client.translate(new_r, target_language=question_lang)["translatedText"]
+        
+        processed_responses.append(new_r)
+        # print("Original Response: ", response)
+        # print("Processed Response: ", new_r)
+        # print("**********************")
+    
+    return processed_responses
+
+
 def main():
     # question = "Inwieweit wird in der Organisation Informationssicherheit gemanagt?"
     file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/SEC Questionaire 3.pdf"
+    # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/test.pdf"
+   
     filled_file_path = fill_Questionnaire(file_path)
-    print(f"Filled questionnaire saved at {filled_file_path}")
+    
+
+
+
     
     
 
