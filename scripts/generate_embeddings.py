@@ -94,13 +94,13 @@ def load_documents(directory="././src/KnowledgeBase"):
 
 def split_documents(allDocs):
     r_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=150,
-    chunk_overlap=0,
+    chunk_size=512,
+    chunk_overlap=100,
     separators=["\n\n", "\n", "(?<=\. )", " ", ""]
     )
 
     r_splitter_excel = RecursiveCharacterTextSplitter(
-        chunk_size=150,
+        chunk_size=512,
         chunk_overlap=0,
         separators=["\r\n", "\n", "\t", ",", " "]
     )
@@ -132,7 +132,8 @@ def generate_embeddings(splits, model_name = "all-MiniLM-L6-v2.gguf2.f16.gguf"):
     cloud_id  = '01a9e8bc7d7e4b91affdfcc8b88e70dd:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJDVjZDFmMGQ0NDJkMzQ3ODA5ZmNiMjk4MTM5NmE4NGMxJGRmNTZhYTExYmE2YzRlZWZhOTE4NTBkMDJjZTY2MDIx'
     elastic_vector_search = ElasticsearchStore(
         es_cloud_id=cloud_id,
-        index_name="embeddings_index",
+        # index_name="embeddings_index",
+        index_name="embeddings_index2",
         embedding=embedding,
         es_user="group13",
         es_password=password,
