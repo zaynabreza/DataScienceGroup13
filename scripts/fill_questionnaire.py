@@ -27,6 +27,10 @@ import textwrap
 import copy
 from langdetect import detect
 from google.cloud import translate_v2 as translate
+import pytesseract
+from PIL import Image
+from docx import Document
+import textract
 
 
 
@@ -96,7 +100,7 @@ def generateResponse(retriever, model_path, question, llm):
     return response
 
 
-def get_Questions(filePath, llm):
+def get_Questions(filePath):
 
     # if file ends in .pdf:
     if filePath.endswith(".pdf"):
@@ -118,6 +122,49 @@ def get_Questions(filePath, llm):
             questions.append(question)
 
         return questions
+
+    # elif filePath.endswith(".doc"):
+    #     text = textract.process(filePath)
+    #     text=text.decode('utf-8')
+
+
+    #     raw_questions = []
+    #     collect = False
+    #     for line in text.split('\n'):
+    #         if 'Antwort:' in line:
+    #             collect = False
+    #         if collect:
+    #             if line.strip():  # Ensuring non-empty lines
+    #                 raw_questions.append(line.strip())
+    #         if 'Fragebogen' in line:  # This could be the marker to start collecting questions
+    #             collect = True
+
+        # Clean the questions and combine parts
+        questions = []
+        for question in raw_questions:
+            question = re.sub(r'[_\r]+', '', question).strip()  # Clean up underscores and carriage returns
+            question = re.sub(r'\s+', ' ', question)  # Replace multiple spaces with a single space
+            questions.append(question)
+
+        return questions
+
+    elif filePath.endswith(".docx"):
+        doc = Document(filePath)
+        raw_questions = []
+        for para in doc.paragraphs:
+            text = para.text.strip()
+            raw_questions.append(text)
+
+        # Clean the questions and combine parts
+        questions = []
+        for question in raw_questions:
+            question = re.sub(r'[_\r]+', '', question).strip()  # Clean up underscores and carriage returns
+            question = re.sub(r'\s+', ' ', question)  # Replace multiple spaces with a single space
+            questions.append(question)
+
+        return questions
+
+
 
 
 def generate_pdf(file_path, responses, questions):
@@ -177,7 +224,7 @@ def fill_Questionnaire(file_path):
 
 
 
-    questions = get_Questions(file_path, None)
+    questions = get_Questions(file_path)
     print("Questions extracted:")
     print(questions)
 
@@ -297,10 +344,65 @@ def main():
     # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/test.pdf"
    
     filled_file_path = fill_Questionnaire(file_path)
+    # test_questions = ["Inwieweit sind Richtlinien zur Informationssicherheit vorhanden?",
+    #               "Inwieweit wird in der Organisation Informationssicherheit gemanagt?",
+    #               "Inwieweit sind die Verantwortlichkeiten für Informationssicherheit organisiert?",
+    #               "Inwieweit werden Informationssicherheitsanforderungen in Projekten berücksichtigt?",
+    #               "Inwieweit sind die Verantwortlichkeiten zwischen Organisations-fremden IT-Service-Anbietern und der eigenen Organisation definiert?",
+    #               "Inwieweit werden Informationswerte (Assets) identifiziert und erfasst?",
+    #               "Inwieweit werden Informationswerte hinsichtlich ihres Schutzbedarfs klassifiziert und gemanagt?",
+    #               "Inwieweit wird sichergestellt, dass nur evaluierte und freigegebene organisationsfremde IT-Dienste zum Verarbeiten von Informationswerten der Organisation eingesetzt werden?",
+    #               "Inwieweit werden Informationssicherheitsrisiken gemanagt?",
+    #               "Inwieweit wird die Einhaltung der Informationssicherheit in Verfahren und Prozessen sichergestellt?",
+    #               "Inwieweit wird das ISMS von einer unabhängigen Instanz überprüft?",
+    #               "Inwieweit werden Informationssicherheitsereignisse verarbeitet?",
+    #               "Inwieweit wird die Eignung von Mitarbeitern für sensible Tätigkeitsbereiche sichergestellt?",
+    #               "Inwieweit werden alle Mitarbeiter zur Einhaltung der Informationssicherheit verpflichtet?",
+    #               "Inwieweit werden Mitarbeiter über die Risiken beim Umgang mit Informationen geschult und sensibilisiert?",
+    #               "Inwieweit ist mobiles Arbeiten geregelt?",
+    #               "Inwieweit werden Sicherheitszonen für den Schutz von Informationswerten gemanagt?",
+    #               "Inwieweit ist in Ausnahmesituationen die Informationssicherheit sichergestellt?",
+    #               "Inwieweit ist der Umgang mit Informationsträgern gemanagt?",
+    #               "Inwieweit ist der Umgang mit mobilen IT-Geräten und mobilen Datenträgern gemanagt?",
+    #               "Inwieweit ist der Umgang mit Identifikationsmitteln gemanagt?",
+    #               "Inwieweit wird der Zugang von Benutzern zu Netzwerkdiensten, IT-Systemen und IT-Anwendungen gesichert?",
+    #               "Inwieweit werden Benutzerkonten und Anmeldeinformationen sicher verwaltet und angewandt?",
+    #               "Inwieweit werden Zugriffsberechtigungen vergeben und gemanagt?",
+    #               "Inwieweit wird die Nutzung kryptografischer Verfahren gemanagt?",
+    #               "Inwieweit werden Informationen während der Übertragung geschützt?",
+    #               "Inwieweit werden Änderungen gesteuert?",
+    #               "Inwieweit sind die Entwicklungs- und Testumgebungen von den Produktivumgebungen getrennt?",
+    #               "Inwieweit werden IT-Systeme vor Schadsoftware geschützt?",
+    #               "Inwieweit werden Ereignisprotokolle aufgezeichnet und analysiert?",
+    #               "Inwieweit werden Schwachstellen erkannt und behandelt?",
+    #               "Inwieweit werden IT-Systeme technisch überprüft (Systemaudit)?",
+    #               "Inwieweit wird das Netzwerk der Organisation gemanagt?",
+    #               "Inwieweit wird Informationssicherheit bei neuen oder weiterentwickelten IT-Systemen berücksichtigt?",
+    #               "Inwieweit sind Anforderungen an Netzwerkdienste definiert?",
+    #               "Inwieweit ist die Rückgabe und das sichere Entfernen von Informationswerten aus Organisationsfremden IT-Diensten geregelt?",
+    #               "Inwieweit sind Informationen in gemeinsam genutzten organisationsfremden IT-Diensten geschützt?",
+    #               "Inwieweit wird die Informationssicherheit bei Auftragnehmern und Kooperationspartnern sichergestellt?",
+    #               "Inwieweit ist Geheimhaltung beim Austausch von Informationen vertraglich vereinbart?",
+    #               "Inwieweit wird die Einhaltung regulatorischer und vertraglicher Bestimmungen sichergestellt?",
+    #               "Inwieweit wird der Schutz von personenbezogenen Daten bei der Umsetzung der Informationssicherheit berücksichtigt?"]
+
+    # generated_responses = np.load("postprocessing/generated_responses_mmr_mistral.npy")
     
+    # responses = post_process_responses(generated_responses, test_questions)
+
+    # # save as npy
+    # np.save("postprocessing/generated_responses_mmr_mistral_postprocessed.npy", responses)
+
+    # # open and print to test
+    # responses = np.load("postprocessing/generated_responses_mmr_mistral_postprocessed.npy")
+    
+    # for r in responses:
+    #     print(r)
+    #     print("**********************")
 
 
-
+    # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/Fragebogen - Buchführung und Logistiksystem.doc"
+    # print(get_Questions(file_path))
     
     
 
