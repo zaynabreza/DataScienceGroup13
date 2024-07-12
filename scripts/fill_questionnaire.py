@@ -220,11 +220,13 @@ def generate_pdf(file_path, responses, questions):
     print(f"PDF generated: {new_file_name}")
     return new_file_name
 
-def fill_Questionnaire(file_path):
+def fill_Questionnaire(file_path,textInput=None):
 
 
-
-    questions = get_Questions(file_path)
+    if textInput is None:
+        questions = get_Questions(file_path)
+    else:
+        questions = [textInput]
     print("Questions extracted:")
     print(questions)
 
@@ -235,7 +237,8 @@ def fill_Questionnaire(file_path):
 
      # Initialize the model
     # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
-    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+    model_path = "/Users/omeriqbal/Downloads/mistral-7b-instruct-v0.1.Q4_0.gguf"
     llm, compressor = initializeModel(model_path)
 
     # Get the retriever
@@ -340,8 +343,9 @@ def post_process_responses(responses, questions):
 
 def main():
     # question = "Inwieweit wird in der Organisation Informationssicherheit gemanagt?"
-    file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/SEC Questionaire 3.pdf"
+    # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/SEC Questionaire 3.pdf"
     # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/test.pdf"
+    file_path = "questionnaires/SEC Questionaire 3.pdf"
    
     filled_file_path = fill_Questionnaire(file_path)
     # test_questions = ["Inwieweit sind Richtlinien zur Informationssicherheit vorhanden?",
