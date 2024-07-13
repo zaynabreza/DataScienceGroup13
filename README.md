@@ -2,15 +2,20 @@
 
 Welcome to the QuestSecure repository! 🚀 This assistant is designed to automate the filling of questionnaires efficiently and securely.
 
-## Description
+##  📖 Description
 
-QuestSecure is a tool that simplifies the process of handling questionnaires by automatically filling them out based on a given input. This repository contains all the necessary files to set up and run QuestSecure.
+QuestSecure simplifies the handling of security questionnaires by:
 
-## Installation
+- **Automated Filling**: Uses a Retrieval-Augmented Generation (RAG) system, built on a knowledge base of internal policies.
+- **Enhanced Security**: Ensures the security of data by performing all processing and language model computations on the local hardware.
+- **Ease of Setup**: Provides all necessary files and detailed instructions for a quick start.
+
+
+## 🛠️ Installation 
 
 Before running the application, you need to set up your environment. Here's how you can do it:
 
-### Step 1: Clone the Repository
+### Step 1: Clone the Repository 
 
 Start by cloning this repository to your local machine:
 
@@ -19,15 +24,14 @@ git clone https://github.com/zaynabreza/DataScienceGroup13.git
 cd DataScienceGroup13
 ```
 
-### Step 2: Install Dependencies
+### Step 2: Install Dependencies 
 
 Install all required Python libraries using the provided `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
-
-### Step 3: GPU4All and Model Setup
+### Step 3: GPU4All and Model Setup 
 
 Install GPU4All and download the model you wish to use.
 
@@ -50,7 +54,7 @@ Execute the application using Streamlit:
 streamlit run frontend.py
 ```
 
-## Building the Knowledge Base
+## 🧠 Building the Knowledge Base
 
 QuestSecure can build a knowledge base from documents for its questionnaire-filling capabilities. Currently, the system supports PDF and Excel files.
 
