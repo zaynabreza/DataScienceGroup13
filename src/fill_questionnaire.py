@@ -77,7 +77,7 @@ def initializeModel(model_path):
 
 def generateResponse(retriever, model_path, question, llm):
     # Says max 3 sentences, can change accoriding to the requirement
-    prompt = hub.pull("zbr/rag-prompt")
+    prompt = hub.pull("rlm/rag-prompt")
 
     example_messages = prompt.invoke(
         {"context": "filler context", "question": "filler question"}
@@ -224,7 +224,7 @@ def fill_Questionnaire(file_path,textInput=None):
 
 
     if textInput is None:
-        questions = get_Questions(file_path)[:1]
+        questions = get_Questions(file_path)
     else:
         questions = [textInput]
     print("Questions extracted:")
@@ -236,13 +236,18 @@ def fill_Questionnaire(file_path,textInput=None):
     print("Index initialized")
 
      # Initialize the model
-    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
     # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
-    model_path = "/Users/omeriqbal/Downloads/mistral-7b-instruct-v0.1.Q4_0.gguf"
+    # model_path = "/Users/omeriqbal/Downloads/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+
+    load_dotenv()
+    model_path = os.getenv('model_path')
+
     llm, compressor = initializeModel(model_path)
 
     # Get the retriever
-    retriever = getRetriever(elastic_vector_search, top_k=10)
+    retriever = getRetriever(elastic_vector_search, top_k=9)
     print("Retriever initialized")
 
     # Generate the response
@@ -256,8 +261,13 @@ def fill_Questionnaire(file_path,textInput=None):
         responses.append(response)
 
     responses = post_process_responses(responses, questions)
+
+    # save the responses as npy
+    np.save("responses.npy", responses)
+    np.save("questions.npy", questions)
     
-    return generate_pdf(file_path, responses, questions)
+    return generate_pdf(file_path, responses, questions), responses, questions
+
 
 def generate_answer(question):
 
@@ -266,8 +276,16 @@ def generate_answer(question):
     print("Index initialized")
 
      # Initialize the model
-    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
-    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+    # defaut model path
+    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+    # read model_path from .env file
+    load_dotenv()
+    model_path = os.getenv('model_path')
+
+
     llm, compressor = initializeModel(model_path)
 
     # Get the retriever
@@ -275,14 +293,25 @@ def generate_answer(question):
     print("Retriever initialized")
 
 
-    response = generateResponse(retriever, model_path, question, llm)
+    # response = generateResponse(retriever, model_path, question, llm)
 
+    response = "In der Organisation wird die Informationssicherheit durch das ISMS (Sicherheitsmanagement) gemanagt. Der Umzug von Informationen und Systemen wird durch eine interne Haustechnik-Abteilung durchgeführt, unterstützt von anderen Abteilungen wie der IT-Administration. Dokumenteneigenschaften werden in einem Protokoll dokumentiert und kontrolliert. Die Geschäftsführung hat die Gesamtverantwortung für die Informationssicherheit übernommen und erhält einen Management-Report jeden Monat, um den Umsetzungsstand der Maßnahme zu kontrollieren."
+
+    responses=[]
+    questions = []
+    questions.append(question)
+    responses.append(response)
+
+    # return generate_pdf("question.pdf", responses, questions)
     return response
 
 def post_process_responses(responses, questions):
     print("Post processing responses")
 
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "././hybrid-unity-429117-d7-1182307a468e.json"
+
+    load_dotenv()
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv('google_key_path')
 
     
     translate_client = translate.Client()

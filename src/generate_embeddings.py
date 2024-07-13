@@ -52,7 +52,7 @@ def process_csv(file_path):
             docs.append(newDoc)
     return docs
 
-def load_documents(directory="././src/KnowledgeBase"):
+def load_documents(directory="././notebooks/KnowledgeBase"):
     allDocs = {}
 
     for filename in os.listdir(directory):
