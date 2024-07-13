@@ -123,21 +123,21 @@ def get_Questions(filePath):
 
         return questions
 
-    # elif filePath.endswith(".doc"):
-    #     text = textract.process(filePath)
-    #     text=text.decode('utf-8')
+    elif filePath.endswith(".doc"):
+        text = textract.process(filePath)
+        text=text.decode('utf-8')
 
 
-    #     raw_questions = []
-    #     collect = False
-    #     for line in text.split('\n'):
-    #         if 'Antwort:' in line:
-    #             collect = False
-    #         if collect:
-    #             if line.strip():  # Ensuring non-empty lines
-    #                 raw_questions.append(line.strip())
-    #         if 'Fragebogen' in line:  # This could be the marker to start collecting questions
-    #             collect = True
+        raw_questions = []
+        collect = False
+        for line in text.split('\n'):
+            if 'Antwort:' in line:
+                collect = False
+            if collect:
+                if line.strip():  # Ensuring non-empty lines
+                    raw_questions.append(line.strip())
+            if 'Fragebogen' in line:  # This could be the marker to start collecting questions
+                collect = True
 
         # Clean the questions and combine parts
         questions = []
@@ -245,6 +245,7 @@ def fill_Questionnaire(file_path,textInput=None):
     model_path = os.getenv('model_path')
 
     llm, compressor = initializeModel(model_path)
+    print("Model initialized")
 
     # Get the retriever
     retriever = getRetriever(elastic_vector_search, top_k=9)
@@ -287,15 +288,16 @@ def generate_answer(question):
 
 
     llm, compressor = initializeModel(model_path)
+    print("Model initialized")
 
     # Get the retriever
     retriever = getRetriever(elastic_vector_search, top_k=10)
     print("Retriever initialized")
 
 
-    # response = generateResponse(retriever, model_path, question, llm)
+    response = generateResponse(retriever, model_path, question, llm)
 
-    response = "In der Organisation wird die Informationssicherheit durch das ISMS (Sicherheitsmanagement) gemanagt. Der Umzug von Informationen und Systemen wird durch eine interne Haustechnik-Abteilung durchgeführt, unterstützt von anderen Abteilungen wie der IT-Administration. Dokumenteneigenschaften werden in einem Protokoll dokumentiert und kontrolliert. Die Geschäftsführung hat die Gesamtverantwortung für die Informationssicherheit übernommen und erhält einen Management-Report jeden Monat, um den Umsetzungsstand der Maßnahme zu kontrollieren."
+    # response = "In der Organisation wird die Informationssicherheit durch das ISMS (Sicherheitsmanagement) gemanagt. Der Umzug von Informationen und Systemen wird durch eine interne Haustechnik-Abteilung durchgeführt, unterstützt von anderen Abteilungen wie der IT-Administration. Dokumenteneigenschaften werden in einem Protokoll dokumentiert und kontrolliert. Die Geschäftsführung hat die Gesamtverantwortung für die Informationssicherheit übernommen und erhält einen Management-Report jeden Monat, um den Umsetzungsstand der Maßnahme zu kontrollieren."
 
     responses=[]
     questions = []

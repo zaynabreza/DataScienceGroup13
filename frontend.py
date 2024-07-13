@@ -33,23 +33,7 @@ def download_button(filepath):
 
 def main():
     st.set_page_config(page_title="Hydac GPT 🤖", page_icon="🤖")
-    # css = """
-    #         <style>
-    #         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-    #         body {
-    #             font-family: 'Poppins', sans-serif;
-    #         }
-
-    #         h1, h2, h3, h4, h5, h6 {
-    #             font-family: 'Poppins', sans-serif;
-    #         }
-
-    #         p, div, span, li, a {
-    #             font-family: 'Poppins', sans-serif;
-    #         }
-    #         </style>
-    #     """
+   
     css_kode_mono = """
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap');
