@@ -224,7 +224,7 @@ def fill_Questionnaire(file_path,textInput=None):
 
 
     if textInput is None:
-        questions = get_Questions(file_path)
+        questions = get_Questions(file_path)[:1]
     else:
         questions = [textInput]
     print("Questions extracted:")

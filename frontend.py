@@ -62,14 +62,14 @@ def main():
     st.title('Hydac GPT 🤖')
     st.write("""
     ### Welcome to Hydac GPT! 👋
-    Your intelligent Chatbot for security questionnaires.
-    
+    Your intelligent chatbot for filling out security questionnaires.
+
     **Instructions:**
-    1. Enter your text or upload your document in DOCX or PDF format.
+    1. Enter your text or upload your questionnaire in DOCX or PDF format.
     2. Enter your Elasticsearch API Key and Password in the sidebar.
-    3. Click the Submit button to start processing your document.
-    
-    Once the document is uploaded, it will be processed, and the results will be generated shortly.
+    3. Click the Submit button to start processing your questionnaire.
+
+    Once the questionnaire is uploaded, it will be processed, and the results will be generated shortly.
     """)
     st.sidebar.image(Image.open('logo.png'), use_column_width=True)
     elasticsearch_api_key = st.sidebar.text_input('Elasticsearch API Key', type='password')
