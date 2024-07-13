@@ -50,6 +50,30 @@ Execute the application using Streamlit:
 streamlit run frontend.py
 ```
 
+## Building the Knowledge Base
+
+QuestSecure can build a knowledge base from documents for its questionnaire-filling capabilities. Currently, the system supports PDF and Excel files.
+
+### Step 1: Organize Your Documents
+
+Place all the PDF and Excel files you want to include in the knowledge base into a single folder.
+
+### Step 2: Update Environment Variables
+
+Add the path to your documents folder to the `.env` file. Set the `knowledge_base_path` variable with your folder path:
+
+```
+knowledge_base_path="YOUR_PATH_HERE"
+```
+### Step 3: Generate Embeddings
+
+Run the following command to generate embeddings from your documents, which will be used to power the knowledge retrieval features of QuestSecure:
+
+```
+python generate_embeddings.py
+```
+This process may take some time depending on the number and size of the documents.
+
 ## Support
 
 For support, contact us through the repository issues or pull requests. Contributions to enhance QuestSecure are always welcome! 🌟
