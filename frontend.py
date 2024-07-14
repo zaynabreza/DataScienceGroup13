@@ -135,7 +135,7 @@ def main():
                 answer, sources = generate_answer(question)
                 st.markdown(f"<div class='question'>Question: {question}</div>", unsafe_allow_html=True)
                 st.markdown(f"<div class='answer'>Answer: {answer}</div>", unsafe_allow_html=True)
-                filenames = [extract_filename(src) for src in srcs]
+                filenames = [extract_filename(src) for src in sources]
                 source_text = ", ".join(filenames)  # Combine sources into a single string
                 if source_text:  # Only display if there are sources
                     st.markdown(f"<div class='source'>Sources: {source_text}</div>", unsafe_allow_html=True)
