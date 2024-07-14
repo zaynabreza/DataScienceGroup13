@@ -77,7 +77,7 @@ def initializeModel(model_path):
 
 def generateResponse(retriever, model_path, question, llm):
     # Says max 3 sentences, can change accoriding to the requirement
-    prompt = hub.pull("zbr/rag-prompt")
+    prompt = hub.pull("rlm/rag-prompt")
 
     example_messages = prompt.invoke(
         {"context": "filler context", "question": "filler question"}
@@ -123,21 +123,21 @@ def get_Questions(filePath):
 
         return questions
 
-    # elif filePath.endswith(".doc"):
-    #     text = textract.process(filePath)
-    #     text=text.decode('utf-8')
+    elif filePath.endswith(".doc"):
+        text = textract.process(filePath)
+        text=text.decode('utf-8')
 
 
-    #     raw_questions = []
-    #     collect = False
-    #     for line in text.split('\n'):
-    #         if 'Antwort:' in line:
-    #             collect = False
-    #         if collect:
-    #             if line.strip():  # Ensuring non-empty lines
-    #                 raw_questions.append(line.strip())
-    #         if 'Fragebogen' in line:  # This could be the marker to start collecting questions
-    #             collect = True
+        raw_questions = []
+        collect = False
+        for line in text.split('\n'):
+            if 'Antwort:' in line:
+                collect = False
+            if collect:
+                if line.strip():  # Ensuring non-empty lines
+                    raw_questions.append(line.strip())
+            if 'Fragebogen' in line:  # This could be the marker to start collecting questions
+                collect = True
 
         # Clean the questions and combine parts
         questions = []
@@ -236,28 +236,45 @@ def fill_Questionnaire(file_path,textInput=None):
     print("Index initialized")
 
      # Initialize the model
-    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
     # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
-    model_path = "/Users/omeriqbal/Downloads/mistral-7b-instruct-v0.1.Q4_0.gguf"
+    # model_path = "/Users/omeriqbal/Downloads/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+
+    load_dotenv()
+    model_path = os.getenv('model_path')
+
     llm, compressor = initializeModel(model_path)
+    print("Model initialized")
 
     # Get the retriever
-    retriever = getRetriever(elastic_vector_search, top_k=10)
+    retriever = getRetriever(elastic_vector_search, top_k=9)
     print("Retriever initialized")
 
     # Generate the response
     responses=[]
 
+    total_sources = []
+
     for question in questions:
         response = generateResponse(retriever, model_path, question, llm)
-
-        # response = ' '.join(list(dict.fromkeys(response.split())))
+        retrieved_docs = retriever.invoke(question)
+        sources_set = {doc.metadata['source'] for doc in retrieved_docs}
+        sources = list(sources_set)[:5]  # Limit to top 5 unique sources
+        
+        print("Sources: ", sources)
 
         responses.append(response)
+        total_sources.append(sources)
 
     responses = post_process_responses(responses, questions)
+
+
+    # save the responses as npy
+    np.save("responses.npy", responses)
     
-    return generate_pdf(file_path, responses, questions)
+    return generate_pdf(file_path, responses, questions), responses, questions, total_sources
+
 
 def generate_answer(question):
 
@@ -266,9 +283,18 @@ def generate_answer(question):
     print("Index initialized")
 
      # Initialize the model
-    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
-    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+    # defaut model path
+    model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/Meta-Llama-3-8B-Instruct.Q4_0.gguf"
+    # model_path = "/Users/I748655/Library/Application Support/nomic.ai/GPT4All/mistral-7b-instruct-v0.1.Q4_0.gguf"
+
+    # read model_path from .env file
+    load_dotenv()
+    model_path = os.getenv('model_path')
+
+
     llm, compressor = initializeModel(model_path)
+    print("Model initialized")
 
     # Get the retriever
     retriever = getRetriever(elastic_vector_search, top_k=10)
@@ -277,12 +303,26 @@ def generate_answer(question):
 
     response = generateResponse(retriever, model_path, question, llm)
 
-    return response
+    retrieved_docs = retriever.invoke(question)
+    sources_set = {doc.metadata['source'] for doc in retrieved_docs}
+    sources = list(sources_set)[:5]  # Limit to top 5 unique sources
+
+    
+    responses=[]
+    questions = []
+    questions.append(question)
+    responses.append(response)
+
+    # return generate_pdf("question.pdf", responses, questions)
+    return response, sources
 
 def post_process_responses(responses, questions):
     print("Post processing responses")
 
     os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "././hybrid-unity-429117-d7-1182307a468e.json"
+
+    load_dotenv()
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv('google_key_path')
 
     
     translate_client = translate.Client()
@@ -345,73 +385,69 @@ def main():
     # question = "Inwieweit wird in der Organisation Informationssicherheit gemanagt?"
     # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/SEC Questionaire 3.pdf"
     # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/test.pdf"
-    file_path = "questionnaires/SEC Questionaire 3.pdf"
+    # file_path = "questionnaires/SEC Questionaire 3.pdf"
    
-    filled_file_path = fill_Questionnaire(file_path)
-    # test_questions = ["Inwieweit sind Richtlinien zur Informationssicherheit vorhanden?",
-    #               "Inwieweit wird in der Organisation Informationssicherheit gemanagt?",
-    #               "Inwieweit sind die Verantwortlichkeiten für Informationssicherheit organisiert?",
-    #               "Inwieweit werden Informationssicherheitsanforderungen in Projekten berücksichtigt?",
-    #               "Inwieweit sind die Verantwortlichkeiten zwischen Organisations-fremden IT-Service-Anbietern und der eigenen Organisation definiert?",
-    #               "Inwieweit werden Informationswerte (Assets) identifiziert und erfasst?",
-    #               "Inwieweit werden Informationswerte hinsichtlich ihres Schutzbedarfs klassifiziert und gemanagt?",
-    #               "Inwieweit wird sichergestellt, dass nur evaluierte und freigegebene organisationsfremde IT-Dienste zum Verarbeiten von Informationswerten der Organisation eingesetzt werden?",
-    #               "Inwieweit werden Informationssicherheitsrisiken gemanagt?",
-    #               "Inwieweit wird die Einhaltung der Informationssicherheit in Verfahren und Prozessen sichergestellt?",
-    #               "Inwieweit wird das ISMS von einer unabhängigen Instanz überprüft?",
-    #               "Inwieweit werden Informationssicherheitsereignisse verarbeitet?",
-    #               "Inwieweit wird die Eignung von Mitarbeitern für sensible Tätigkeitsbereiche sichergestellt?",
-    #               "Inwieweit werden alle Mitarbeiter zur Einhaltung der Informationssicherheit verpflichtet?",
-    #               "Inwieweit werden Mitarbeiter über die Risiken beim Umgang mit Informationen geschult und sensibilisiert?",
-    #               "Inwieweit ist mobiles Arbeiten geregelt?",
-    #               "Inwieweit werden Sicherheitszonen für den Schutz von Informationswerten gemanagt?",
-    #               "Inwieweit ist in Ausnahmesituationen die Informationssicherheit sichergestellt?",
-    #               "Inwieweit ist der Umgang mit Informationsträgern gemanagt?",
-    #               "Inwieweit ist der Umgang mit mobilen IT-Geräten und mobilen Datenträgern gemanagt?",
-    #               "Inwieweit ist der Umgang mit Identifikationsmitteln gemanagt?",
-    #               "Inwieweit wird der Zugang von Benutzern zu Netzwerkdiensten, IT-Systemen und IT-Anwendungen gesichert?",
-    #               "Inwieweit werden Benutzerkonten und Anmeldeinformationen sicher verwaltet und angewandt?",
-    #               "Inwieweit werden Zugriffsberechtigungen vergeben und gemanagt?",
-    #               "Inwieweit wird die Nutzung kryptografischer Verfahren gemanagt?",
-    #               "Inwieweit werden Informationen während der Übertragung geschützt?",
-    #               "Inwieweit werden Änderungen gesteuert?",
-    #               "Inwieweit sind die Entwicklungs- und Testumgebungen von den Produktivumgebungen getrennt?",
-    #               "Inwieweit werden IT-Systeme vor Schadsoftware geschützt?",
-    #               "Inwieweit werden Ereignisprotokolle aufgezeichnet und analysiert?",
-    #               "Inwieweit werden Schwachstellen erkannt und behandelt?",
-    #               "Inwieweit werden IT-Systeme technisch überprüft (Systemaudit)?",
-    #               "Inwieweit wird das Netzwerk der Organisation gemanagt?",
-    #               "Inwieweit wird Informationssicherheit bei neuen oder weiterentwickelten IT-Systemen berücksichtigt?",
-    #               "Inwieweit sind Anforderungen an Netzwerkdienste definiert?",
-    #               "Inwieweit ist die Rückgabe und das sichere Entfernen von Informationswerten aus Organisationsfremden IT-Diensten geregelt?",
-    #               "Inwieweit sind Informationen in gemeinsam genutzten organisationsfremden IT-Diensten geschützt?",
-    #               "Inwieweit wird die Informationssicherheit bei Auftragnehmern und Kooperationspartnern sichergestellt?",
-    #               "Inwieweit ist Geheimhaltung beim Austausch von Informationen vertraglich vereinbart?",
-    #               "Inwieweit wird die Einhaltung regulatorischer und vertraglicher Bestimmungen sichergestellt?",
-    #               "Inwieweit wird der Schutz von personenbezogenen Daten bei der Umsetzung der Informationssicherheit berücksichtigt?"]
+    # filled_file_path = fill_Questionnaire(file_path)
+    test_questions = ["Inwieweit sind Richtlinien zur Informationssicherheit vorhanden?",
+                  "Inwieweit wird in der Organisation Informationssicherheit gemanagt?",
+                  "Inwieweit sind die Verantwortlichkeiten für Informationssicherheit organisiert?",
+                  "Inwieweit werden Informationssicherheitsanforderungen in Projekten berücksichtigt?",
+                  "Inwieweit sind die Verantwortlichkeiten zwischen Organisations-fremden IT-Service-Anbietern und der eigenen Organisation definiert?",
+                  "Inwieweit werden Informationswerte (Assets) identifiziert und erfasst?",
+                  "Inwieweit werden Informationswerte hinsichtlich ihres Schutzbedarfs klassifiziert und gemanagt?",
+                  "Inwieweit wird sichergestellt, dass nur evaluierte und freigegebene organisationsfremde IT-Dienste zum Verarbeiten von Informationswerten der Organisation eingesetzt werden?",
+                  "Inwieweit werden Informationssicherheitsrisiken gemanagt?",
+                  "Inwieweit wird die Einhaltung der Informationssicherheit in Verfahren und Prozessen sichergestellt?",
+                  "Inwieweit wird das ISMS von einer unabhängigen Instanz überprüft?",
+                  "Inwieweit werden Informationssicherheitsereignisse verarbeitet?",
+                  "Inwieweit wird die Eignung von Mitarbeitern für sensible Tätigkeitsbereiche sichergestellt?",
+                  "Inwieweit werden alle Mitarbeiter zur Einhaltung der Informationssicherheit verpflichtet?",
+                  "Inwieweit werden Mitarbeiter über die Risiken beim Umgang mit Informationen geschult und sensibilisiert?",
+                  "Inwieweit ist mobiles Arbeiten geregelt?",
+                  "Inwieweit werden Sicherheitszonen für den Schutz von Informationswerten gemanagt?",
+                  "Inwieweit ist in Ausnahmesituationen die Informationssicherheit sichergestellt?",
+                  "Inwieweit ist der Umgang mit Informationsträgern gemanagt?",
+                  "Inwieweit ist der Umgang mit mobilen IT-Geräten und mobilen Datenträgern gemanagt?",
+                  "Inwieweit ist der Umgang mit Identifikationsmitteln gemanagt?",
+                  "Inwieweit wird der Zugang von Benutzern zu Netzwerkdiensten, IT-Systemen und IT-Anwendungen gesichert?",
+                  "Inwieweit werden Benutzerkonten und Anmeldeinformationen sicher verwaltet und angewandt?",
+                  "Inwieweit werden Zugriffsberechtigungen vergeben und gemanagt?",
+                  "Inwieweit wird die Nutzung kryptografischer Verfahren gemanagt?",
+                  "Inwieweit werden Informationen während der Übertragung geschützt?",
+                  "Inwieweit werden Änderungen gesteuert?",
+                  "Inwieweit sind die Entwicklungs- und Testumgebungen von den Produktivumgebungen getrennt?",
+                  "Inwieweit werden IT-Systeme vor Schadsoftware geschützt?",
+                  "Inwieweit werden Ereignisprotokolle aufgezeichnet und analysiert?",
+                  "Inwieweit werden Schwachstellen erkannt und behandelt?",
+                  "Inwieweit werden IT-Systeme technisch überprüft (Systemaudit)?",
+                  "Inwieweit wird das Netzwerk der Organisation gemanagt?",
+                  "Inwieweit wird Informationssicherheit bei neuen oder weiterentwickelten IT-Systemen berücksichtigt?",
+                  "Inwieweit sind Anforderungen an Netzwerkdienste definiert?",
+                  "Inwieweit ist die Rückgabe und das sichere Entfernen von Informationswerten aus Organisationsfremden IT-Diensten geregelt?",
+                  "Inwieweit sind Informationen in gemeinsam genutzten organisationsfremden IT-Diensten geschützt?",
+                  "Inwieweit wird die Informationssicherheit bei Auftragnehmern und Kooperationspartnern sichergestellt?",
+                  "Inwieweit ist Geheimhaltung beim Austausch von Informationen vertraglich vereinbart?",
+                  "Inwieweit wird die Einhaltung regulatorischer und vertraglicher Bestimmungen sichergestellt?",
+                  "Inwieweit wird der Schutz von personenbezogenen Daten bei der Umsetzung der Informationssicherheit berücksichtigt?"]
 
-    # generated_responses = np.load("postprocessing/generated_responses_mmr_mistral.npy")
+    generated_responses = np.load("././postprocessing/generated_responses_mistral_mmr_old_chunk.npy")
     
-    # responses = post_process_responses(generated_responses, test_questions)
+    responses = post_process_responses(generated_responses, test_questions)
 
-    # # save as npy
-    # np.save("postprocessing/generated_responses_mmr_mistral_postprocessed.npy", responses)
+    # save as npy
+    np.save("././postprocessing/generated_responses_mistral_mmr_old_chunk_postprocessed.npy", responses)
 
-    # # open and print to test
-    # responses = np.load("postprocessing/generated_responses_mmr_mistral_postprocessed.npy")
+    # open and print to test
+    responses = np.load("././postprocessing/generated_responses_mistral_mmr_old_chunk_postprocessed.npy")
     
-    # for r in responses:
-    #     print(r)
-    #     print("**********************")
+    for r in responses:
+        print(r)
+        print("**********************")
 
 
     # file_path = "/Users/I748655/Uni/Semester 2/Data Science/Project/DataScienceGroup13/questionnaires/Fragebogen - Buchführung und Logistiksystem.doc"
     # print(get_Questions(file_path))
     
-    
-
-
-   
 
 
 

@@ -52,7 +52,7 @@ def process_csv(file_path):
             docs.append(newDoc)
     return docs
 
-def load_documents(directory="././src/KnowledgeBase"):
+def load_documents(directory="././notebooks/KnowledgeBase"):
     allDocs = {}
 
     for filename in os.listdir(directory):
@@ -154,7 +154,10 @@ def delete_index(elastic_vector_search, index_name="embeddings_index"):
 
 def main():
     
-    allDocs = load_documents()
+    load_dotenv()  # This loads the .env file at the application start
+    directory = os.getenv('knowledge_base_path')
+
+    allDocs = load_documents(directory)
 
     splits = split_documents(allDocs)
 
