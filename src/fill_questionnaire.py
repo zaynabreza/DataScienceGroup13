@@ -272,12 +272,8 @@ def fill_Questionnaire(file_path,textInput=None):
 
     # save the responses as npy
     np.save("responses.npy", responses)
-    np.save("sources.npy", total_sources)
-
-
     
-    # return "SEC Questionaire 3_filled.pdf", responses, questions
-    return generate_pdf(file_path, responses, questions), responses, questions, sources
+    return generate_pdf(file_path, responses, questions), responses, questions, total_sources
 
 
 def generate_answer(question):
@@ -310,12 +306,8 @@ def generate_answer(question):
     retrieved_docs = retriever.invoke(question)
     sources_set = {doc.metadata['source'] for doc in retrieved_docs}
     sources = list(sources_set)[:5]  # Limit to top 5 unique sources
-        
-    print("Sources: ", sources)
 
-
-    # response = "In der Organisation wird die Informationssicherheit durch das ISMS (Sicherheitsmanagement) gemanagt. Der Umzug von Informationen und Systemen wird durch eine interne Haustechnik-Abteilung durchgeführt, unterstützt von anderen Abteilungen wie der IT-Administration. Dokumenteneigenschaften werden in einem Protokoll dokumentiert und kontrolliert. Die Geschäftsführung hat die Gesamtverantwortung für die Informationssicherheit übernommen und erhält einen Management-Report jeden Monat, um den Umsetzungsstand der Maßnahme zu kontrollieren."
-
+    
     responses=[]
     questions = []
     questions.append(question)
