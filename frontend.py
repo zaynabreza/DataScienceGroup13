@@ -24,6 +24,9 @@ def download_button(filepath):
                 mime="application/pdf"
             )
 
+def extract_filename(source_path):
+        return source_path.split('/')[-1]
+
 
 def main():
     st.set_page_config(page_title="Quest Secure 🤖", page_icon="🤖", layout="wide")
@@ -75,6 +78,12 @@ def main():
             font-size: 14px; /* Smaller font size for sidebar */
         }
 
+        .source {
+        color: #888; /* A light gray for less prominence */
+        font-size: 12px; /* Smaller font size for footnotes */
+        padding-left: 10px; /* Indent slightly for aesthetic alignment */
+    }
+
         </style>
     """
     st.markdown(css_kode_mono, unsafe_allow_html=True)
@@ -111,16 +120,25 @@ def main():
                 with open(save_location, "wb") as f:
                     f.write(uploaded_file.getbuffer())
                 st.success("File Upload successful. Processing may take a while.")
-                answers_file_path, responses, questions = fill_Questionnaire(save_location)
+                answers_file_path, responses, questions, sources = fill_Questionnaire(save_location)
                 download_button(answers_file_path)
                 st.markdown("### Questions and Responses")
-                for question, response in zip(questions, responses):
+                for question, response, srcs in zip(questions, responses, sources):
                     st.markdown(f"<div class='question'>Question: {question}</div>", unsafe_allow_html=True)
                     st.markdown(f"<div class='answer'>Answer: {response}</div>", unsafe_allow_html=True)
+                    filenames = [extract_filename(src) for src in srcs]
+                    source_text = ", ".join(filenames)  # Combine sources into a single string
+                    if source_text:  # Only display if there are sources
+                        st.markdown(f"<div class='source'>Sources: {source_text}</div>", unsafe_allow_html=True)
             elif question:
                 st.success("Please wait while we process your question.")
-                answer = generate_answer(question)
+                answer, sources = generate_answer(question)
                 st.markdown(f"<div class='question'>Question: {question}</div>", unsafe_allow_html=True)
                 st.markdown(f"<div class='answer'>Answer: {answer}</div>", unsafe_allow_html=True)
+                filenames = [extract_filename(src) for src in srcs]
+                source_text = ", ".join(filenames)  # Combine sources into a single string
+                if source_text:  # Only display if there are sources
+                    st.markdown(f"<div class='source'>Sources: {source_text}</div>", unsafe_allow_html=True)
+
 
 main()
